@@ -1,0 +1,67 @@
+/*---------------------------------------------------------
+INSPECT RESET - CSS
+@author name Daniel Beff
+@author email daniel.beff@gmail.com
+@author site http://www.danielbeff.com
+@version 1.0.0
+@licence MIT
+---------------------------------------------------------*/
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	text-size-adjust: 100%;
+}
+
+body{
+	margin:0;
+}
+
+* {
+	box-sizing: inherit;
+	-webkit-font-smoothing:inherit;
+	-moz-osx-font-smoothing: inherit;
+}
+
+*:before, *:after {
+	box-sizing: inherit;
+}
+
+// --------------------------------------------------------
+// TYPOGRAPHY
+//---------------------------------------------------------
+a {
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+}
+
+pre {
+	overflow: auto;
+}
+
+// --------------------------------------------------------
+// EMBEDDED
+//---------------------------------------------------------
+img {
+	border: 0;
+}
+
+// --------------------------------------------------------
+// LISTS
+//---------------------------------------------------------
+nav ul {
+	list-style: none;
+}
+
+// --------------------------------------------------------
+// TABLE
+//---------------------------------------------------------
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,th {
+	padding: 0;
+}

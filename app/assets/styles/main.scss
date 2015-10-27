@@ -1,0 +1,86 @@
+//------------------------------------------------------
+//FRONTENDLER
+//------------------------------------------------------
+@import "frontendler/frontendler";
+
+//------------------------------------------------------
+//VARS
+//------------------------------------------------------
+$font-size-text: 20px;
+html,
+body {
+    width: 100%;
+    font-family: $font-family;
+    font-size: $font-size-text;
+    transition-duration: $animation-speed;
+    animation-duration: $animation-speed;
+    position: relative;
+}
+.slide {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: all ($animation-speed * 3) $animation-ease;
+}
+.controls {
+    @include clearfix;
+    position: fixed;
+    bottom: $grid-gutter/2;
+    right: $grid-gutter/2;
+    backface-visibility: hidden;
+    .bt {
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(0,0,0,0.5);
+        color: rgba(255,255,255,0.9);
+        float: left;
+        margin-left: 2px;
+        border-radius: 3px;
+        font-weight: 600;
+        font-size: 20px;
+        user-select: none;
+        cursor: pointer;
+    }
+}
+.container {
+    padding: $grid-gutter;
+}
+#start {
+    background: theme-color("dark");
+    color: white;
+    .logo {
+        width: 100%;
+        line-height: 100vh;
+        font-family: "Grand Hotel";
+        font-size: 100px;
+        text-align: center;
+    }
+}
+#slide1 {
+    background: theme-color("orange");
+    color: white;
+    &.disable {
+        opacity: 0;
+    }
+}
+#slide2 {
+    background: theme-color("purple");
+    color: white;
+    &.disable {
+        left: 100vw;
+        opacity: 0;
+    }
+}
+#slide3 {
+    background: theme-color("ocean");
+    color: white;
+    &.disable {
+        left: -100vw;
+        opacity: 0;
+    }
+}
